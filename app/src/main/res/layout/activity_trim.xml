@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FfmpegMyLibrary">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/videoView"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startTime"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="00:00:00"
+            android:layout_below="@+id/seekBar"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_18sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/endTime"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="00:00:00"
+            android:layout_below="@+id/seekBar"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_18sdp"/>
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rangeSeekBar"
+            rsb_indicator_text_color="#fff"
+            rsb_progress_color="@color/progressseven"
+            rsb_tick_mark_text_color="#000000"
+            android:layout_centerInParent="true"/>
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+</RelativeLayout>
