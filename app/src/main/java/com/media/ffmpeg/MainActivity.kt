@@ -32,8 +32,10 @@ class MainActivity : AppCompatActivity() {
                 if (!folder.exists())
                     folder.mkdir()
                 val dest= File(folder,"ssss"+".mp4")
+                var intent=Intent(this,ProgressBarActivty::class.java)
                 intent.putExtra("uri",data.data.toString())
-                FfmpegMyLibrary(this).createVideoFromImage(data.data!!,dest.path,progressBar,55)
+                startActivity(intent)
+               // FfmpegMyLibrary(this).createVideoFromImage(data.data!!,dest.path,progressBar,55)
             }
     }
 }

@@ -29,7 +29,7 @@ class FfmpegMyLibrary (val context: Context){
     }
 
     fun createVideoFromImage(inputFileUri:Uri, destFilePath: String,progressBar: ProgressBar,secondDuration:Int) {
-        var empty = arrayOf("-framerate","30","-loop","1","-i",getPath(context,inputFileUri),"-c:v","libx264","-t","$secondDuration","-pix_fmt","yuv420p", "-vf","scale=240:240",destFilePath)
+        var empty = arrayOf("-framerate","1","-loop","1","-i",getPath(context,inputFileUri),"-c:v","libx264","-t","$secondDuration","-pix_fmt","yuv420p", "-vf","scale=240:240",destFilePath)
         fFmpeg!!.execute(empty,object: ExecuteBinaryResponseHandler() {
             override fun onFinish() {
                 super.onFinish()

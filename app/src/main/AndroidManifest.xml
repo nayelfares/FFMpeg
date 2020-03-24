@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProgressBarActivty"></activity>
+        <activity android:name=".ShareToSnapchat"></activity>
+        <activity android:name=".ProgressBarActivty" />
         <activity android:name=".FfmpegMyLibrary" />
         <activity android:name=".MainActivity">
             <intent-filter>
