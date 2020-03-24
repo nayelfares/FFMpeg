@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 if (!folder.exists())
                     folder.mkdir()
                 val dest= File(folder,"ssss"+".mp4")
-                var intent=Intent(this,ProgressBarActivty::class.java)
+                var intent=Intent(this,ShareToSnapchat::class.java)
                 intent.putExtra("uri",data.data.toString())
                 startActivity(intent)
                // FfmpegMyLibrary(this).createVideoFromImage(data.data!!,dest.path,progressBar,55)
